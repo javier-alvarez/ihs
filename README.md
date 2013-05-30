@@ -1,4 +1,4 @@
-IHS: Intelligent Home Sensing
+IHS: Intelligent Home System
 =============================
 
 Description
@@ -15,9 +15,9 @@ Please see the [wiki][] for specification and other documentation on IHS.
 
 License
 -------
-Released under the LGPG License.  See the [LICENSE][] file for further details.
+Released under the Creative Commons License (CC BY-SA Attribution-ShareAlike).  See the [LICENSE][] for further details.
 
-[license]: LICENSE.md
+[license]: http://creativecommons.org/licenses/by-sa/3.0/
 
 
 
