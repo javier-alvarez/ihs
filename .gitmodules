@@ -1,3 +1,6 @@
 [submodule "wiki"]
 	path = wiki
 	url = https://github.com/mlnx/ihs.wiki
+[submodule "hw/lib/Adafruit-Eagle-Library"]
+	path = hw/lib/Adafruit-Eagle-Library
+	url = https://github.com/adafruit/Adafruit-Eagle-Library
