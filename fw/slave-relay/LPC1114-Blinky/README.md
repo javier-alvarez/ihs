@@ -7,9 +7,9 @@ Working:
 - Basic config with internal RC oscillator
 - GPIO config and LED blinking
 - UART config, tx character
+- System timer with interrupt
 
 TBD:
-- Config system timer and basic interrups
 - SPI Master
 
 

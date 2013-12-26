@@ -505,7 +505,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name></Name>
+          <Name>/</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -532,7 +532,7 @@
         <periodic>1</periodic>
         <aLwin>1</aLwin>
         <aCover>0</aCover>
-        <aSer1>1</aSer1>
+        <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
@@ -555,12 +555,6 @@
       </DebugFlag>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
-      <SystemViewers>
-        <Entry>
-          <Name>System Viewer\UART</Name>
-          <WinId>35905</WinId>
-        </Entry>
-      </SystemViewers>
     </TargetOption>
   </Target>
 
@@ -578,7 +572,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>119</TopLine>
+      <TopLine>118</TopLine>
       <CurrentLine>126</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_LPC11xx.s</PathWithFileName>
@@ -590,12 +584,12 @@
       <GroupNumber>1</GroupNumber>
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>56</ColumnNumber>
+      <ColumnNumber>75</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>96</TopLine>
-      <CurrentLine>99</CurrentLine>
+      <TopLine>101</TopLine>
+      <CurrentLine>111</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\system_LPC11xx.c</PathWithFileName>
       <FilenameWithoutPath>system_LPC11xx.c</FilenameWithoutPath>
@@ -618,8 +612,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>50</TopLine>
-      <CurrentLine>60</CurrentLine>
+      <TopLine>54</TopLine>
+      <CurrentLine>48</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Blinky.c</PathWithFileName>
       <FilenameWithoutPath>Blinky.c</FilenameWithoutPath>
@@ -646,15 +640,31 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>31</TopLine>
-      <CurrentLine>42</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Serial.c</PathWithFileName>
       <FilenameWithoutPath>Serial.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>6</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>32</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1</TopLine>
+      <CurrentLine>24</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\IRQ.c</PathWithFileName>
+      <FilenameWithoutPath>IRQ.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

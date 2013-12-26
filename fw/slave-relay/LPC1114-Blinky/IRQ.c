@@ -21,8 +21,7 @@ volatile unsigned char  clock_1s;       /* Flag activated each second         */
   SysTick IRQ: Executed periodically (10ms) 
  *----------------------------------------------------------------------------*/
 void SysTick_Handler (void) {
-  static unsigned long ticks;
-  static unsigned long timetick;
+  static unsigned long ticks = 0;
 
   if (ticks++ >= 99) {                  /* Set Clock1s to 1 every 1 second    */
     ticks    = 0;
@@ -30,3 +29,4 @@ void SysTick_Handler (void) {
   }
 
 }
+

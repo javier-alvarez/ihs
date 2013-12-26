@@ -16,12 +16,13 @@
 #include <stdio.h>
 #include "LPC11xx.h"                            /* LPC11xx definitions        */
 
-#define LED       (1<<8)      /* LED D1 connect to PIO1_8 */
+#define LED       (1<<8)                        /* LED connected to PIO1_8    */
 
 /* Import external functions from Serial.c file                               */
 extern void SER_init (void);
 extern void SER_init (void);    
 extern int sendchar (int c);
+extern volatile unsigned char  clock_1s;
 
 /*----------------------------------------------------------------------------
   Function that initializes LEDs
@@ -45,13 +46,6 @@ void LED_Off (void) {
 	LPC_GPIO1->DATA &= ~LED;
 }
 
-void delay(int a)
-{
-	int b,c;
-	 for (b=0;b<a;b++)
-	 	 for (c=0;c<2000;c++)
-	     __NOP();
-}
 
 /*----------------------------------------------------------------------------
   MAIN function
@@ -59,26 +53,28 @@ void delay(int a)
 int main (void) {                               /* Main Program               */
   char state = 0;
 	
-  SystemInit(); // SystemCoreClock/100);          /* Generate IRQ each ~10 ms   */
-
+	SysTick_Config(SystemCoreClock/100);          /* Generate IRQ each ~10 ms   */
+	
   LED_init();                                   /* LED Initialization         */
   SER_init();                                   /* UART#1 Initialization      */
 
   while (1)
-	{                                   /* Loop forever               */
-	  delay(1000);
-    state++;
+	{                                             /* Loop forever               */		
+		if (clock_1s)
+		{
+			clock_1s = 0;
+			state++;
 			
-		if (state & 0x1)
-		{
-			LED_On();
-		  sendchar('A');
-		  sendchar('\n');
-		  sendchar('\r');			
-		}
-		else
-		{
-			LED_Off();			
-		}
-   }
+			if (state & 0x01)
+			{
+			  LED_On();
+		    sendchar('A');
+		    sendchar('\n');
+		    sendchar('\r');			
+		  }
+			else
+				LED_Off();
+
+		}	
+  }
 }
