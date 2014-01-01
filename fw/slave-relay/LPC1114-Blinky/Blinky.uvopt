@@ -459,8 +459,8 @@
         <TargetDlgDllArguments>-pLPC1114</TargetDlgDllArguments>
       </DllOpt>
       <DebugOpt>
-        <uSim>0</uSim>
-        <uTrg>1</uTrg>
+        <uSim>1</uSim>
+        <uTrg>0</uTrg>
         <sLdApp>1</sLdApp>
         <sGomain>1</sGomain>
         <sRbreak>1</sRbreak>
@@ -478,7 +478,7 @@
         <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
-        <nTsel>7</nTsel>
+        <nTsel>4</nTsel>
         <sDll></sDll>
         <sDllPa></sDllPa>
         <sDlgDll></sDlgDll>
@@ -510,7 +510,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(250=-1,-1,-1,-1,0)(450=-1,-1,-1,-1,0)(311=79,302,943,615,0)(420=128,160,314,289,0)(421=128,160,338,323,0)(422=-1,-1,-1,-1,0)(107=-1,-1,-1,-1,0)(440=83,111,419,383,0)(431=83,111,419,383,0)(433=-1,-1,-1,-1,0)(434=-1,-1,-1,-1,0)(301=98,128,464,418,0)(470=-1,-1,-1,-1,0)(460=-1,-1,-1,-1,0)(321=-1,-1,-1,-1,0)(500=-1,-1,-1,-1,0)(511=-1,-1,-1,-1,0)(480=-1,-1,-1,-1,0)(490=-1,-1,-1,-1,0)(360=-1,-1,-1,-1,0)(339=-1,-1,-1,-1,0)(340=819,324,1131,684,1)(341=-1,-1,-1,-1,0)(342=-1,-1,-1,-1,0)(381=362,49,737,829,1)(261=-1,-1,-1,-1,0)(262=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(126=-1,-1,-1,-1,0)(127=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(280=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(250=-1,-1,-1,-1,0)(450=-1,-1,-1,-1,0)(311=79,302,943,615,0)(420=128,160,314,289,0)(421=128,160,338,323,0)(422=-1,-1,-1,-1,0)(107=-1,-1,-1,-1,0)(440=83,111,419,383,0)(431=83,111,419,383,0)(433=-1,-1,-1,-1,0)(434=-1,-1,-1,-1,0)(301=98,128,464,418,0)(470=-1,-1,-1,-1,0)(460=-1,-1,-1,-1,0)(321=-1,-1,-1,-1,0)(500=-1,-1,-1,-1,0)(511=-1,-1,-1,-1,0)(480=-1,-1,-1,-1,0)(490=-1,-1,-1,-1,0)(360=135,168,875,814,0)(339=-1,-1,-1,-1,0)(340=801,421,1113,781,1)(341=-1,-1,-1,-1,0)(342=-1,-1,-1,-1,0)(381=674,283,1049,1063,1)(261=80,338,386,758,1)(262=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(126=-1,-1,-1,-1,0)(127=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(280=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -532,7 +532,7 @@
         <periodic>1</periodic>
         <aLwin>1</aLwin>
         <aCover>0</aCover>
-        <aSer1>0</aSer1>
+        <aSer1>1</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
         <viewmode>1</viewmode>
@@ -544,7 +544,7 @@
         <AscS3>0</AscS3>
         <aSer3>0</aSer3>
         <eProf>0</eProf>
-        <aLa>0</aLa>
+        <aLa>1</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
@@ -555,6 +555,47 @@
       </DebugFlag>
       <LintExecutable></LintExecutable>
       <LintConfigFile></LintConfigFile>
+      <LogicAnalyzers>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>((GPIO0DATA &amp; 0x00000100) &gt;&gt; 8 &amp; 0x100) &gt;&gt; 8</FirstString>
+          <SecondString>00000000000000000000F03F000000000000F03F01000000000000000000000000000000284750494F30444154412026203078303030303031303029203E3E203800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000010000009A9999999999C93F090000000000000000000000000000000000000078010000</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>1</IntNumber>
+          <FirstString>((GPIO0DATA &amp; 0x00000200) &gt;&gt; 9 &amp; 0x200) &gt;&gt; 9</FirstString>
+          <SecondString>FF00000000000000000000000000E0FFFFFFEF4101000000000000000000000000000000284750494F30444154412026203078303030303032303029203E3E203900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000020000009A9999999999C93F090000000000000000000000000000000000000078010000</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>2</IntNumber>
+          <FirstString>((GPIO0DATA &amp; 0x00000040) &gt;&gt; 6 &amp; 0x40) &gt;&gt; 6</FirstString>
+          <SecondString>0080000000000000000000000000E0FFFFFFEF4101000000000000000000000000000000284750494F30444154412026203078303030303030343029203E3E203600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000030000009A9999999999C93F090000000000000000000000000000000000000078010000</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>3</IntNumber>
+          <FirstString>((GPIO0DATA &amp; 0x00000004) &gt;&gt; 2 &amp; 0x4) &gt;&gt; 2</FirstString>
+          <SecondString>0000800000000000000000000000E0FFFFFFEF4101000000000000000000000000000000284750494F30444154412026203078303030303030303429203E3E203200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000040000009A9999999999C93F090000000000000000000000000000000000000078010000</SecondString>
+        </Wi>
+        <Wi>
+          <IntNumber>4</IntNumber>
+          <FirstString>((GPIO0DATA &amp; 0x00000400) &gt;&gt; 10 &amp; 0x400) &gt;&gt; 10</FirstString>
+          <SecondString>0000000000000000000000000000E0FFFFFFEF4100000000000000000000000000000000284750494F30444154412026203078303030303034303029203E3E203130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000050000009A9999999999C93F0900000000000000000000000000000000000000B4010000</SecondString>
+        </Wi>
+      </LogicAnalyzers>
+      <SystemViewers>
+        <Entry>
+          <Name>System Viewer\GPIO0</Name>
+          <WinId>35903</WinId>
+        </Entry>
+        <Entry>
+          <Name>System Viewer\SPI0</Name>
+          <WinId>35904</WinId>
+        </Entry>
+        <Entry>
+          <Name>System Viewer\UART</Name>
+          <WinId>35905</WinId>
+        </Entry>
+      </SystemViewers>
     </TargetOption>
   </Target>
 
@@ -572,7 +613,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>118</TopLine>
+      <TopLine>122</TopLine>
       <CurrentLine>126</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_LPC11xx.s</PathWithFileName>
@@ -588,8 +629,8 @@
       <Focus>0</Focus>
       <ColumnNumber>75</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>101</TopLine>
-      <CurrentLine>111</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\system_LPC11xx.c</PathWithFileName>
       <FilenameWithoutPath>system_LPC11xx.c</FilenameWithoutPath>
@@ -612,8 +653,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>54</TopLine>
-      <CurrentLine>48</CurrentLine>
+      <TopLine>58</TopLine>
+      <CurrentLine>70</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Blinky.c</PathWithFileName>
       <FilenameWithoutPath>Blinky.c</FilenameWithoutPath>
@@ -626,7 +667,7 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>18</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
       <CurrentLine>0</CurrentLine>
@@ -640,12 +681,12 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>18</TopLine>
+      <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\Serial.c</PathWithFileName>
       <FilenameWithoutPath>Serial.c</FilenameWithoutPath>
@@ -658,13 +699,29 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>32</ColumnNumber>
+      <ColumnNumber>69</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>24</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\IRQ.c</PathWithFileName>
       <FilenameWithoutPath>IRQ.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>7</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>2</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>97</TopLine>
+      <CurrentLine>78</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\Spi.c</PathWithFileName>
+      <FilenameWithoutPath>Spi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

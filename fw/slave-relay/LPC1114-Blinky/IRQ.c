@@ -23,7 +23,7 @@ volatile unsigned char  clock_1s;       /* Flag activated each second         */
 void SysTick_Handler (void) {
   static unsigned long ticks = 0;
 
-  if (ticks++ >= 99) {                  /* Set Clock1s to 1 every 1 second    */
+  if (ticks++ >= 49) {                  /* Set Clock1s to 1 every 0.5 second    */
     ticks    = 0;
     clock_1s = 1;
   }

@@ -24,6 +24,11 @@ extern void SER_init (void);
 extern int sendchar (int c);
 extern volatile unsigned char  clock_1s;
 
+extern void SPI0_IRQHandler(void);
+extern void SPI0_init(void);
+extern void SPI0_send(uint8_t *Buf, uint32_t Length );
+// extern void SPI0_Receive( uint8_t portNum, uint8_t *buf, uint32_t Length )
+
 /*----------------------------------------------------------------------------
   Function that initializes LEDs
  *----------------------------------------------------------------------------*/
@@ -52,11 +57,13 @@ void LED_Off (void) {
  *----------------------------------------------------------------------------*/
 int main (void) {                               /* Main Program               */
   char state = 0;
+	uint8_t buf[] = {0x5, 0xA, 0x3, 0x5A};
 	
 	SysTick_Config(SystemCoreClock/100);          /* Generate IRQ each ~10 ms   */
 	
   LED_init();                                   /* LED Initialization         */
   SER_init();                                   /* UART#1 Initialization      */
+	SPI0_init();
 
   while (1)
 	{                                             /* Loop forever               */		
@@ -70,7 +77,9 @@ int main (void) {                               /* Main Program               */
 			  LED_On();
 		    sendchar('A');
 		    sendchar('\n');
-		    sendchar('\r');			
+		    sendchar('\r');
+
+        SPI0_send(buf, 4);
 		  }
 			else
 				LED_Off();
