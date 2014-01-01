@@ -8,9 +8,9 @@ Working:
 - GPIO config and LED blinking
 - UART config, tx character
 - System timer with interrupt
-
-TBD:
 - SPI Master
+
+
 
 
 
